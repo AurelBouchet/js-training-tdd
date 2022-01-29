@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
  * Create a `keepFirst` function that takes a string as parameter
@@ -13,9 +13,30 @@
  */
 
 // Your code:
+const keepFirst = (str) => {
+  return str.slice(0, 2);
+};
 
+const keepLast = (str) => {
+  return str.slice(-2);
+};
+
+const keepFirstLast = (str) => {
+  return str.slice(0, 2) + str.slice(-2);
+};
 //* Begin of tests
-const assert = require('assert');
+const assert = require("assert");
 
-assert.fail('You must write your own tests');
+// keepFirst
+assert.strictEqual(keepFirst("ratatouille"), "ra");
+assert.strictEqual(keepFirst("rap"), "ra");
+// keepLast
+assert.strictEqual(keepLast("bonjour"), "ur");
+assert.strictEqual(keepLast("paris"), "is");
+
+// keepFirstLast
+assert.strictEqual(keepFirstLast("nantes et angers"), "nars");
+assert.strictEqual(keepFirstLast("pomme"), "pome");
+
+// assert.fail("You must write your own tests");
 // End of tests */
